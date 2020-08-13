@@ -10,7 +10,8 @@
 		024BDE2EDF7990BA97AA8200 /* Pods_SwiftProjectTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAA2D5BB3F0912F5C7DC00C /* Pods_SwiftProjectTemplate.framework */; };
 		8D785FB9D7850D8AF9EF9F00 /* Pods_SwiftProjectTemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E96656441B2D1F55A7A46D /* Pods_SwiftProjectTemplateTests.framework */; };
 		E164C0DA24E4B79E00E64A6C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E164C0D924E4B79E00E64A6C /* .swiftlint.yml */; };
-		E1DC6BAB24E4A6F700DB0A2C /* SwiftProjectTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC6BAA24E4A6F700DB0A2C /* SwiftProjectTemplateTests.swift */; };
+		E1C64ED424E4BCDB00F405A7 /* AuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C64ED324E4BCDB00F405A7 /* AuthenticationType.swift */; };
+		E1C64ED824E4BDCC00F405A7 /* AuthenticationTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C64ED724E4BDCC00F405A7 /* AuthenticationTypeTests.swift */; };
 		E1DC6BBC24E4A9D600DB0A2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC6BB924E4A9D600DB0A2C /* ViewController.swift */; };
 		E1DC6BBD24E4A9D600DB0A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC6BBA24E4A9D600DB0A2C /* AppDelegate.swift */; };
 		E1DC6BC124E4AA7D00DB0A2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DC6BBE24E4AA7D00DB0A2C /* Assets.xcassets */; };
@@ -36,9 +37,10 @@
 		774E1A01B72F78C6D6C77827 /* Pods-SwiftProjectTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProjectTemplate/Pods-SwiftProjectTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		C28D0BAAFB666B5A706A4C2B /* Pods-SwiftProjectTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProjectTemplateTests/Pods-SwiftProjectTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E164C0D924E4B79E00E64A6C /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E1C64ED324E4BCDB00F405A7 /* AuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationType.swift; sourceTree = "<group>"; };
+		E1C64ED724E4BDCC00F405A7 /* AuthenticationTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTypeTests.swift; sourceTree = "<group>"; };
 		E1DC6B9024E4A6F100DB0A2C /* SwiftProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DC6BA624E4A6F700DB0A2C /* SwiftProjectTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProjectTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1DC6BAA24E4A6F700DB0A2C /* SwiftProjectTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectTemplateTests.swift; sourceTree = "<group>"; };
 		E1DC6BAC24E4A6F700DB0A2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DC6BB924E4A9D600DB0A2C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1DC6BBA24E4A9D600DB0A2C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,46 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E1C64ED024E4BC8500F405A7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E1DC6BB924E4A9D600DB0A2C /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E1C64ED124E4BCC500F405A7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E1C64ED224E4BCCC00F405A7 /* Enums */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E1C64ED224E4BCCC00F405A7 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E1C64ED324E4BCDB00F405A7 /* AuthenticationType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E1C64ED524E4BDA000F405A7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E1C64ED624E4BDAF00F405A7 /* Enums */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E1C64ED624E4BDAF00F405A7 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E1C64ED724E4BDCC00F405A7 /* AuthenticationTypeTests.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		E1DC6B8724E4A6F100DB0A2C = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +163,7 @@
 		E1DC6BA924E4A6F700DB0A2C /* SwiftProjectTemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1DC6BAA24E4A6F700DB0A2C /* SwiftProjectTemplateTests.swift */,
+				E1C64ED524E4BDA000F405A7 /* Domain */,
 				E1DC6BAC24E4A6F700DB0A2C /* Info.plist */,
 			);
 			path = SwiftProjectTemplateTests;
@@ -131,7 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				E1DC6BBA24E4A9D600DB0A2C /* AppDelegate.swift */,
-				E1DC6BB924E4A9D600DB0A2C /* ViewController.swift */,
+				E1C64ED124E4BCC500F405A7 /* Domain */,
+				E1C64ED024E4BC8500F405A7 /* Scenes */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -206,6 +249,7 @@
 					};
 					E1DC6BA524E4A6F700DB0A2C = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 						TestTargetID = E1DC6B8F24E4A6F100DB0A2C;
 					};
 				};
@@ -354,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C64ED424E4BCDB00F405A7 /* AuthenticationType.swift in Sources */,
 				E1DC6BBD24E4A9D600DB0A2C /* AppDelegate.swift in Sources */,
 				E1DC6BBC24E4A9D600DB0A2C /* ViewController.swift in Sources */,
 			);
@@ -363,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DC6BAB24E4A6F700DB0A2C /* SwiftProjectTemplateTests.swift in Sources */,
+				E1C64ED824E4BDCC00F405A7 /* AuthenticationTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +585,7 @@
 			baseConfigurationReference = C28D0BAAFB666B5A706A4C2B /* Pods-SwiftProjectTemplateTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3T2VA3Q3;
 				INFOPLIST_FILE = SwiftProjectTemplateTests/Info.plist;
@@ -551,6 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.experiments.SwiftProjectTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftProjectTemplate.app/SwiftProjectTemplate";
@@ -562,6 +609,7 @@
 			baseConfigurationReference = 0383C2CDCF31451FEC558866 /* Pods-SwiftProjectTemplateTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3T2VA3Q3;
 				INFOPLIST_FILE = SwiftProjectTemplateTests/Info.plist;
