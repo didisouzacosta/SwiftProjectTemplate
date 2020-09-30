@@ -22,7 +22,6 @@
 		E176D1F32524ADD000831D8B /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E176D1F22524ADD000831D8B /* ProductViewCell.xib */; };
 		E176D2AF2524AFA300831D8B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176D2AE2524AFA300831D8B /* UIView+Extension.swift */; };
 		E176D2B52524B50E00831D8B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176D2B42524B50E00831D8B /* UIImageView+Extension.swift */; };
-		E1C64ED824E4BDCC00F405A7 /* AuthenticationTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C64ED724E4BDCC00F405A7 /* AuthenticationTypeTests.swift */; };
 		E1DC6BBD24E4A9D600DB0A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC6BBA24E4A9D600DB0A2C /* AppDelegate.swift */; };
 		E1DC6BC124E4AA7D00DB0A2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DC6BBE24E4AA7D00DB0A2C /* Assets.xcassets */; };
 		E1DC6BC724E4AAA500DB0A2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DC6BC524E4AAA400DB0A2C /* LaunchScreen.storyboard */; };
@@ -58,7 +57,6 @@
 		E176D1F22524ADD000831D8B /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		E176D2AE2524AFA300831D8B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E176D2B42524B50E00831D8B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		E1C64ED724E4BDCC00F405A7 /* AuthenticationTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTypeTests.swift; sourceTree = "<group>"; };
 		E1DC6B9024E4A6F100DB0A2C /* SwiftProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DC6BA624E4A6F700DB0A2C /* SwiftProjectTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProjectTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DC6BAC24E4A6F700DB0A2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,32 +208,8 @@
 			children = (
 				E176D1012524A27B00831D8B /* Repositories */,
 				E176D0FA2524A22C00831D8B /* Models */,
-				E1C64ED224E4BCCC00F405A7 /* Enums */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		E1C64ED224E4BCCC00F405A7 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
-		E1C64ED524E4BDA000F405A7 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				E1C64ED624E4BDAF00F405A7 /* Enums */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		E1C64ED624E4BDAF00F405A7 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				E1C64ED724E4BDCC00F405A7 /* AuthenticationTypeTests.swift */,
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 		E1DC6B8724E4A6F100DB0A2C = {
@@ -271,7 +245,6 @@
 		E1DC6BA924E4A6F700DB0A2C /* SwiftProjectTemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1C64ED524E4BDA000F405A7 /* Domain */,
 				E1DC6BAC24E4A6F700DB0A2C /* Info.plist */,
 			);
 			path = SwiftProjectTemplateTests;
@@ -524,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C64ED824E4BDCC00F405A7 /* AuthenticationTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
