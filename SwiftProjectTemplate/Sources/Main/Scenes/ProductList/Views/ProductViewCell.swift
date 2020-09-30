@@ -77,7 +77,7 @@ final class ProductViewCell: UITableViewCell {
     
     private func setupSubstancy(_ product: Product) {
         substanceLabel.text = product.substance
-        substanceLabel.isHidden = product.substance?.isEmpty ?? true
+        substanceLabel.isHidden = !(product.substance?.isEmpty ?? true)
     }
     
 }

@@ -118,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				E176D1EB2524AD8F00831D8B /* Views */,
-				E13038042524A117005DDDC5 /* ViewModels */,
 				E13038032524A10C005DDDC5 /* Controllers */,
 			);
 			path = ProductList;
@@ -140,13 +139,6 @@
 				E13037412524A001005DDDC5 /* ProductListViewController.xib */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E13038042524A117005DDDC5 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E176D0FA2524A22C00831D8B /* Models */ = {
