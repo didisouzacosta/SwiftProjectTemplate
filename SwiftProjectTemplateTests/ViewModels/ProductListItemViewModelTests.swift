@@ -36,6 +36,23 @@ class ProductListItemViewModelTests: XCTestCase {
     func testEnsurePriceDescriptionConsistency() throws {
         let viewModel = ProductListItemViewModel(product)
         expect(viewModel.priceDescription) == "R$ 44,30"
+        expect(viewModel.canDisplayPrice) == true
+    }
+    
+    func testShouldNotDisplayPriceWhenIsZero() throws {
+        let product = Product(
+            id: "991",
+            productId: "00q",
+            productName: "Teste",
+            name: "500mg",
+            sku: 002,
+            lowestPrice: "0",
+            offersCount: 1
+        )
+        
+        let viewModel = ProductListItemViewModel(product)
+        
+        expect(viewModel.canDisplayPrice) == false
     }
     
     func testShouldDisplayOffersWhenOffersIsGreatherThanZero() throws {

@@ -16,6 +16,10 @@ final class ProductListItemViewModel {
         return "\(product.productName) \(product.name)"
     }
     
+    var imageURL: URL? {
+        return product.image
+    }
+    
     var offersCountDescription: String {
         return "\(product.offersCount) ofertas"
     }
@@ -29,7 +33,7 @@ final class ProductListItemViewModel {
     }
     
     var canDisplayOffers: Bool {
-        return product.offersCount == 0
+        return product.offersCount > 0
     }
     
     var priceDescription: String? {
@@ -37,16 +41,22 @@ final class ProductListItemViewModel {
         return price?.currencyDescription
     }
     
+    var canDisplayPrice: Bool {
+        guard let price = Double(product.lowestPrice ?? "0"),
+              price > 0 else { return false }
+        return true
+    }
+    
     var substancy: String? {
         return product.substance
     }
     
-    var canDisplaySubstancy: Bool {
-        return !(product.substance?.isEmpty ?? true)
-    }
-    
     var factory: String? {
         return product.factory
+    }
+    
+    var canDisplaySubstancy: Bool {
+        return !(product.substance?.isEmpty ?? true)
     }
     
     // MARK: - Private Properties
