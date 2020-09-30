@@ -35,9 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func makeProductListViewController() -> ProductListViewController {
         let repository = ProductRepository()
-        let viewModel = ProductListViewModel(repository: repository)
-//        return ProductListViewController(repository: repository)
-        return ProductListViewController(viewModel: viewModel)
+//        let viewModel = ProductListViewModel(repository: repository)
+        return ProductListViewController(repository: repository)
+//        return ProductListViewController(viewModel: viewModel)
     }
 
 }

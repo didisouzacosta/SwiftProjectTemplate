@@ -15,10 +15,10 @@ final class ProductListViewController: UIViewController {
     
     // MARK: - Private Properties
     
-//    private let repository: ProductRepositoryProtocol
-//    private let products = BehaviorSubject<[Product]>(value: [])
-    private let products = BehaviorSubject<[ProductListItemViewModel]>(value: [])
-    private let viewModel: ProductListViewModel
+    private let repository: ProductRepositoryProtocol
+    private let products = BehaviorSubject<[Product]>(value: [])
+//    private let products = BehaviorSubject<[ProductListItemViewModel]>(value: [])
+//    private let viewModel: ProductListViewModel
     private let disposeBag = DisposeBag()
     
     // MARK: Actions
@@ -27,15 +27,15 @@ final class ProductListViewController: UIViewController {
     
     // MARK: - Public Methods
     
-//    init(repository: ProductRepositoryProtocol) {
-//        self.repository = repository
-//        super.init(nibName: nil, bundle: nil)
-//    }
-    
-    init(viewModel: ProductListViewModel) {
-        self.viewModel = viewModel
+    init(repository: ProductRepositoryProtocol) {
+        self.repository = repository
         super.init(nibName: nil, bundle: nil)
     }
+    
+//    init(viewModel: ProductListViewModel) {
+//        self.viewModel = viewModel
+//        super.init(nibName: nil, bundle: nil)
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -54,13 +54,13 @@ final class ProductListViewController: UIViewController {
     
     // MARK: - Private Methods
     
-//    private func setupTitle() {
-//        navigationItem.title = "List de produtos"
-//    }
-    
     private func setupTitle() {
-        navigationItem.title = viewModel.title
+        navigationItem.title = "List de produtos"
     }
+    
+//    private func setupTitle() {
+//        navigationItem.title = viewModel.title
+//    }
     
     private func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
@@ -84,22 +84,22 @@ final class ProductListViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
-//    private func loadData() {
-//        do {
-//            let result = try repository.getAll().get()
-//            products.onNext(result)
-//        } catch {
-//            show(error)
-//        }
-//    }
-    
     private func loadData() {
-        viewModel.getProducts()
-            .do(onError: { [weak self] (error) in
-                self?.show(error)
-            })
-            .bind(to: products)
-            .disposed(by: disposeBag)
+        do {
+            let result = try repository.getAll().get()
+            products.onNext(result)
+        } catch {
+            show(error)
+        }
     }
+    
+//    private func loadData() {
+//        viewModel.getProducts()
+//            .do(onError: { [weak self] (error) in
+//                self?.show(error)
+//            })
+//            .bind(to: products)
+//            .disposed(by: disposeBag)
+//    }
     
 }
