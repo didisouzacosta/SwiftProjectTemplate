@@ -17,6 +17,8 @@ final class ProductListViewController: UIViewController {
     
     private let repository: ProductRepositoryProtocol
     private let products = BehaviorSubject<[Product]>(value: [])
+//    private let products = BehaviorSubject<[ProductListItemViewModel]>(value: [])
+//    private let viewModel: ProductListViewModel
     private let disposeBag = DisposeBag()
     
     // MARK: Actions
@@ -29,6 +31,11 @@ final class ProductListViewController: UIViewController {
         self.repository = repository
         super.init(nibName: nil, bundle: nil)
     }
+    
+//    init(viewModel: ProductListViewModel) {
+//        self.viewModel = viewModel
+//        super.init(nibName: nil, bundle: nil)
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -50,6 +57,10 @@ final class ProductListViewController: UIViewController {
     private func setupTitle() {
         navigationItem.title = "List de produtos"
     }
+    
+//    private func setupTitle() {
+//        navigationItem.title = viewModel.title
+//    }
     
     private func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
@@ -81,5 +92,14 @@ final class ProductListViewController: UIViewController {
             show(error)
         }
     }
+    
+//    private func loadData() {
+//        viewModel.getProducts()
+//            .do(onError: { [weak self] (error) in
+//                self?.show(error)
+//            })
+//            .bind(to: products2)
+//            .disposed(by: disposeBag)
+//    }
     
 }

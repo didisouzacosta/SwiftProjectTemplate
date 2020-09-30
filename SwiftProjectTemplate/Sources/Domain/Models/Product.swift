@@ -22,4 +22,34 @@ public struct Product: Codable {
     let offersCount: Int
     let type: String?
     let category: String?
+    
+    public init(
+        id: String,
+        productId: String,
+        productName: String,
+        name: String,
+        classification: String? = nil,
+        sku: Int,
+        factory: String? = nil,
+        substance: String? = nil,
+        image: URL? = nil,
+        lowestPrice: String? = nil,
+        offersCount: Int,
+        type: String? = nil,
+        category: String? = nil
+    ) {
+        self.id = id
+        self.productId = productId
+        self.productName = productName
+        self.name = name
+        self.classification = classification
+        self.sku = sku
+        self.factory = factory
+        self.substance = substance
+        self.image = image
+        self.lowestPrice = lowestPrice
+        self.offersCount = offersCount
+        self.type = type
+        self.category = category
+    }
 }
